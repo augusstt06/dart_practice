@@ -35,6 +35,26 @@ void variables() {
   String? guessNull;
   guessNull = 'Allow Null';
   print(guessNull);
+
+  /**
+   * final 키워드로 변수 선언
+   * 초기값을 할당 이후 변경 불가 
+   * => 런타임에 초기화가 이루어짐
+   * 변수 선언과 초기화를 다른 시점에 할당할 수 있음
+   */
+  final finalString;
+  finalString = 'This is Final String';
+  print(finalString);
+
+  /**
+   * const 키워드로 변수 선언
+   * final과 유사하게 초기값을 할당하고 이후 변경 불가
+   * => 컴파일 시점에 값이 초기화되므로, 실행전에 결정되어야함.
+   * 컴파일 시점에 값이 결정되어야 할 때 사용
+   * 선언과 초기화를 다른 시점에 할 수 없음.
+   */
+  const constString = 'This is Const String';
+  print(constString);
 }
 
 /**
