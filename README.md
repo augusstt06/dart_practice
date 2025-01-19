@@ -1,3 +1,3 @@
 # Dart Practice
 
-## 1. [Variables](variables/README.md)
+## 1. [Variables](variables/variables.md)
