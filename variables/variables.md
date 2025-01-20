@@ -1,15 +1,15 @@
-## Variables
+# Variables
 
 - [variables.dart](variables.dart)
 
-### 1. 자료형을 선언
+## 1. 자료형을 선언
 
 ```dart
 String kuku = 'Kuku';
 int kukuAge = 2;
 ```
 
-### 2. var
+## 2. var
 
 ```dart
 // guessString = 1; => 오류 발생
@@ -21,7 +21,7 @@ var guessString = 'Kuku2';
 - 타입 추론을 허용하는 변수 선언
 - 처음 할당된 변수의 추론 타입 이외의 값을 할당하는 것이 불가능함.
 
-### 3. dynamic
+## 3. dynamic
 
 ```dart
 dynamic guessDynamic = 'Kuku3';
@@ -33,7 +33,7 @@ guessDynamic = true;
 - 단일타입으로 제한되지 않는 변수 선언
 - var와 달리 처음 할당된 값의 자료형이 무엇이든 상관없이 다른 값 할당 가능
 
-### 4. final
+## 4. final
 
 ```dart
 final finalString;
@@ -46,7 +46,7 @@ print(finalString);
 - **런타임 시점에 초기화**가 이루어진다.
 - 런타임 시점에 초기화 되기 때문에 어떤 함수의 실행값 등, 런타임에 발생하는 값들을 할당할때 사용된다.
 
-### 5. const
+## 5. const
 
 ```dart
 const constString = 'This is Const String';
@@ -59,7 +59,7 @@ print(constString);
 
 ![final_const](../imgs/final_const.png)
 
-### 6. late
+## 6. late
 
 ```dart
 class lateTest {
@@ -84,7 +84,7 @@ class lateTest {
 
 - 변수 선언시, 초기화를 미룰수 있음. (선언과 초기화 시점을 다르게 할때 사용.)
 
-### 7. typedef
+## 7. typedef
 
 ```dart
 typedef Operation(int x, int y);
