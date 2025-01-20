@@ -1,9 +1,3 @@
-void main() {
-  lateTest lateTestClass = lateTest();
-  lateTestClass.setName('Kuku');
-  print(lateTestClass.Hi());
-}
-
 void variables() {
   // 자료형과 함께 변수 선언
   String kuku = 'Kuku';
@@ -79,4 +73,39 @@ class lateTest {
   String Hi() {
     return 'Hi, $name';
   }
+}
+
+// typedef
+typedef Operation(int x, int y);
+
+void add(int x, int y) {
+  print(x + y);
+}
+
+void subtract(int x, int y) {
+  print(x - y);
+}
+
+void operationTest() {
+  Operation addOperation = add;
+  Operation subtractOperation = subtract;
+  addOperation(1, 2);
+  subtractOperation(1, 2);
+}
+
+void calculator(int x, int y, Operation operation) {
+  operation(x, y);
+}
+
+typedef Compare<T> = int Function(T a, T b);
+
+int sort(int a, int b) => a - b;
+
+void main() {
+  lateTest lateTestClass = lateTest();
+  lateTestClass.setName('Kuku');
+  print(lateTestClass.Hi());
+  //
+  calculator(1, 2, add);
+  calculator(1, 2, subtract);
 }

@@ -1,5 +1,3 @@
-# Dart Practice
-
 ## Variables
 
 - [variables.dart](variables.dart)
@@ -85,3 +83,45 @@ class lateTest {
 ```
 
 - 변수 선언시, 초기화를 미룰수 있음. (선언과 초기화 시점을 다르게 할때 사용.)
+
+### 7. typedef
+
+```dart
+typedef Operation(int x, int y);
+
+void add(int x, int y) {
+  print(x + y);
+}
+
+void subtract(int x, int y) {
+  print(x - y);
+}
+
+void operationTest() {
+  Operation addOperation = add;
+  Operation subtractOperation = subtract;
+  addOperation(1, 2);
+  subtractOperation(1, 2);
+}
+
+void calculator(int x, int y, Operation operation) {
+  operation(x, y);
+}
+
+void main() {
+  calculator(1, 2, add);
+  calculator(1, 2, subtract);
+}
+```
+
+- ts의 type, interface 처럼, 특정 객체에 대한 별칭을 지정한다.
+
+  > Docs - typedef is a concise way to refer to a type
+
+- ts 처럼, typedef에 generic 사용이 가능하다.
+
+```dart
+typedef Compare<T> = int Function(T a, T b);
+
+int sort(int a, int b) => a - b;
+```
