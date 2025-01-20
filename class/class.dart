@@ -43,3 +43,19 @@ class LeageOfLegends {
         name = 'commanders',
         team = 'red';
 }
+
+// getter, setter
+
+class Circle {
+  /**
+   * private 변수 _radius는 외부에서 접근이 불가능하다.
+   * 일반적으로 _ 가 붙은 변수를 private 변수로 사용한다.
+
+   */
+  double _radius;
+
+  Circle(this._radius);
+
+  // getter는 _radius라는 private 값을 외부에서도 읽을수 있도록 해준다.(수정은 X, read only) => 무결성 보장
+  double get radius => _radius;
+}
