@@ -35,6 +35,7 @@ class LeageOfLegends {
    * String team;
    * LeageOfLegends(
    *     {required this.member, required this.name, required this.team});
+   * named constructor
    */
 
   LeageOfLegends.red()
