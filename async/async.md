@@ -47,7 +47,11 @@ void main() {
 await 키워드를 사용하게되면, 해당 키워드가 붙은 코드의 실행이 완료 되기 전까지 잠시 실행을 기다린다.
 예시를 통해 이를 확인해보자.
 
+- 추가적으로 async/await 키워드를 사용하기 위해서는 `import 'dart:async';` 코드를 작성해 import를 해줘야 한다.
+
 ```dart
+import 'dart:async';
+
 Future<String> hi() async {
   return await Future.delayed(Duration(seconds: 3), () {
     final hi = 'hi';
